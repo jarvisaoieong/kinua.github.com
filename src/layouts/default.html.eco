@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title><%= @document.title or @site.title %> | My Website</title>
+    <%- @getBlock("meta").toHTML() %>
+    <%- @getBlock("styles").add('styles/vendor.css').toHTML() %>
+</head>
+<body>
+    <%- @content %>
+    <%- @getBlock("scripts").add('scripts/vendor.js').toHTML() %>
+</body>
+</html>
