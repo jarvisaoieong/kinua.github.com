@@ -5,9 +5,10 @@ module.exports = (grunt) ->
 
     read_components:
       read:
-        jsDist: 'src/files/scripts/vendor.js'
-        cssDist: 'src/files/styles/vendor.css'
         options:
           concat: true
+          files:
+            js: 'src/files/scripts/vendor.js'
+            css: 'src/files/styles/vendor.css'
 
   grunt.loadNpmTasks 'grunt-read-components'
